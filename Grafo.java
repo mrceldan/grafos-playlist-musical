@@ -12,9 +12,22 @@ public class Grafo<Tipo> {
         Vertice<Tipo> novoVertice = new Vertice<>(dado);
         this.vertices.add(novoVertice);
     }
-    public void adicionarArresta(Tipo dadoOrigem, Tipo dadoDestino, double peso) {
+    public void adicionarArresta(Tipo dadoOrigem, Tipo dadoDestino, double peso) throws Exception {
         Vertice<Tipo> origem = this.getVertice(dadoOrigem);
         Vertice<Tipo> destino = this.getVertice(dadoDestino);
+
+        if (origem == null || destino == null) {
+        String mensagem = "";
+        if (origem == null) {
+            mensagem += "Origem (Música) não encontrada. ";
+        }
+        if (destino == null) {
+            mensagem += "Destino (Música) não encontrado. ";
+        }
+        // Lança a exceção com uma mensagem mais detalhada
+        throw new Exception("Erro ao adicionar aresta: " + mensagem.trim());
+    }
+    
         Arresta<Tipo> novaArresta = new Arresta<>(origem, destino, peso);
         origem.adicionarArestaSaida(novaArresta);
         destino.adicionarArestaEntrada(novaArresta);
