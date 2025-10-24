@@ -1,9 +1,7 @@
 # 🎵 Playlist Musical — Representação de Grafos
 
 Repositório desenvolvido para a disciplina **Estrutura de Dados**, na modalidade **Aula Invertida**.  
-O objetivo do projeto é demonstrar, na prática, como os **grafos** podem ser aplicados através de uma **playlist musical interativa**.
-
-Cada música é um **nó (vértice)** e as conexões entre músicas representam as **arestas** do grafo.
+O objetivo do projeto é demonstrar, na prática, como os **grafos** podem ser aplicados através de uma **playlist musical interativa**. Cada música é um **nó (vértice)** e as conexões entre músicas representam as **arestas** do grafo.
 
 ---
 
